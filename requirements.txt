@@ -1,2 +1,3 @@
 Flask
 Gunicorn
+pymongo==4.6.3
