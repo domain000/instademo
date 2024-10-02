@@ -3,8 +3,8 @@ from pymongo import MongoClient
 from config import Config
 
 app = Flask(__name__)
-app.secret_key = 'supersecretkey'
 app.config.from_object(Config)
+app.secret_key = app.config['S_KEY']
 
 connection = MongoClient(app.config['DB_URL'])
 database = connection[app.config['DATABASE_NAME']] #db_name
